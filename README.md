@@ -1,1 +1,1 @@
-# Naver_news_scraper
+# 네이버 뉴스크래이퍼 (Naver Newscraper)
