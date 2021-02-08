@@ -8,6 +8,13 @@ from newscraper import Scraper
 import format_Checker as fc
 from output import UserInput 
 
+__author__ = "Sun Gyu Park"
+__copyright__ = "Copyright 2021, NNCraper"
+__license__ = "GPL"
+__version__ = "1.0.0.alpha"
+__maintainer__ = "Sun Gyu Park"
+__email__ = "jappan4212@gmail.com"
+
 def debugDic(dic):
     vals = dic.values()
     for v in vals:
