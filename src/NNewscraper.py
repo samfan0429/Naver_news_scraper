@@ -1,3 +1,11 @@
+'''
+    File name: test.py
+    Author: Peter Test
+    Date created: 4/20/2013
+    Date last modified: 4/25/2013
+    Python Version: 2.7
+'''
+
 from tkinter import *
 from PIL import ImageTk,Image
 import os
@@ -7,13 +15,6 @@ import time
 from newscraper import Scraper 
 import format_Checker as fc
 from output import UserInput 
-
-__author__ = "Sun Gyu Park"
-__copyright__ = "Copyright 2021, NNCraper"
-__license__ = "GPL"
-__version__ = "1.0.0.alpha"
-__maintainer__ = "Sun Gyu Park"
-__email__ = "jappan4212@gmail.com"
 
 def debugDic(dic):
     vals = dic.values()
@@ -104,8 +105,8 @@ class MainApp(Frame):
             # status = Label(self, text = "실행중...",font=self.font_set)
             # status.pack()
             self.scraper.activate(UInput)
-            self.winfo_children()[len(self.winfo_children())-2]['state'] = 'normal'
-            self.winfo_children()[len(self.winfo_children())-1].destroy()
+            self.winfo_children()[len(self.winfo_children())-1]['state'] = 'normal'
+            # self.winfo_children()[len(self.winfo_children())-1].destroy()
 
     def setWarning(self):
         if self.WarningAdded==False:

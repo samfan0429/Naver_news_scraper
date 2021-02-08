@@ -4,6 +4,8 @@ import math
 import re
 import itertools
 import output
+import os
+from datetime import date
 
 def printList(work):
     for s in work:
@@ -22,7 +24,9 @@ class Scraper():
         # end = UInput.end_date
         name = UInput.name
 
-        out_file = open(name+'.tsv', 'w',-1,'utf-8')
+        self.path = self.createFolders()
+
+        out_file = open(os.path.join(self.path,name+'.tsv'), 'w',-1,'utf-8')
         out_file.write('Title\t Company\t Date \t URL\n')
 
         hasNext = True
@@ -74,6 +78,26 @@ class Scraper():
         #     if not i==len(search)-1:
         #         url+='+'
         return url+search
+
+    def createFolders(self):
+        path = os.path.join(os.getcwd(), 'downloaded')
+        today = date.today().strftime("%Y.%m.%d")
+        if not os.path.exists(path):
+            try:
+                os.mkdir(path)
+            except OSError:
+                print ("Creation of the directory %s failed" % path)
+            else:
+                print ("Successfully created the directory %s " % path)
+        path = os.path.join(path,today)
+        if not os.path.exists(path):
+            try:
+                os.mkdir(path)
+            except OSError:
+                print ("Creation of the directory %s failed" % path)
+            else:
+                print ("Successfully created the directory %s " % path)
+        return path
 
     def printInfo(self,UInput):
         print(UInput.searchKey)
