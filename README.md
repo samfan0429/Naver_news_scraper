@@ -1,4 +1,4 @@
-# 네이버 뉴스크래이퍼 (Naver Newscraper)
+# 네이버 뉴스크래이퍼 (NNCraper)
 ## Links
 ------
 [여기서 다운로드](https://github.com/samfan0429/Naver_news_scraper/releases/tag/v1.0.0.alpha)
