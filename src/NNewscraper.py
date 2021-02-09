@@ -50,7 +50,7 @@ class MainApp(Frame):
         self.Create_one_inputs("검색 URL을 입력해주세요: ", 'keys')
 
         # Create a section for narrowing dates
-        # self.CreateDate("날짜 범위를 입력해주세요: ",'start_date','end_date')
+        self.CreateDate("날짜 범위를 입력해주세요: ",'start_date','end_date')
 
         # Add input for output file name
         self.Create_one_inputs("파일명을 영어로 입력해주세요 (빈칸없음): ", 'name')
